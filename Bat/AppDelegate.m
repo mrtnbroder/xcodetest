@@ -10,14 +10,34 @@
 
 @implementation AppDelegate
 
+@synthesize timerItem = _timerItem,
+            statusItem = _statusItem,
+            settingsItem = _settingsItem,
+            startItem = _startItem,
+            mainView = _mainView,
+            window = _window;
+
 - (void)dealloc
 {
+    [_timerItem release];
+    [_statusItem release];
+    [_settingsItem release];
+    [_startItem release];
+    [_mainView release];
+    [_window release];
     [super dealloc];
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
+    WebViewController *controller = [[WebViewController alloc] initWithNibName:@"WebViewController" bundle:nil];
+    
+    [controller.view setFrame:CGRectMake(0, 0, _mainView.frame.size.width, _mainView.frame.size.height)];
+    
+    [_mainView addSubview:controller.view];
+    
+    [controller release];
 }
+
 
 @end

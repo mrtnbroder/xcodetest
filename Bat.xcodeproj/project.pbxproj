@@ -13,6 +13,9 @@
 		1328B0CF17CB6F89007FCCC8 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1328B0CD17CB6F89007FCCC8 /* Credits.rtf */; };
 		1328B0D217CB6F89007FCCC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1328B0D117CB6F89007FCCC8 /* AppDelegate.m */; };
 		1328B0D517CB6F89007FCCC8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1328B0D317CB6F89007FCCC8 /* MainMenu.xib */; };
+		1328B0DC17CB6F91007FCCC8 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1328B0DB17CB6F91007FCCC8 /* WebKit.framework */; };
+		1328B10E17CBA376007FCCC8 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1328B10C17CBA376007FCCC8 /* WebViewController.m */; };
+		1328B10F17CBA376007FCCC8 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1328B10D17CBA376007FCCC8 /* WebViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +32,10 @@
 		1328B0D017CB6F89007FCCC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1328B0D117CB6F89007FCCC8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1328B0D417CB6F89007FCCC8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1328B0DB17CB6F91007FCCC8 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		1328B10B17CBA376007FCCC8 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = ../WebViewController.h; sourceTree = "<group>"; };
+		1328B10C17CBA376007FCCC8 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = ../WebViewController.m; sourceTree = "<group>"; };
+		1328B10D17CBA376007FCCC8 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebViewController.xib; path = ../WebViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1328B0DC17CB6F91007FCCC8 /* WebKit.framework in Frameworks */,
 				1328B0BF17CB6F89007FCCC8 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,6 +71,7 @@
 		1328B0BD17CB6F88007FCCC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1328B0DB17CB6F91007FCCC8 /* WebKit.framework */,
 				1328B0BE17CB6F89007FCCC8 /* Cocoa.framework */,
 				1328B0C017CB6F89007FCCC8 /* Other Frameworks */,
 			);
@@ -84,7 +93,8 @@
 			children = (
 				1328B0D017CB6F89007FCCC8 /* AppDelegate.h */,
 				1328B0D117CB6F89007FCCC8 /* AppDelegate.m */,
-				1328B0D317CB6F89007FCCC8 /* MainMenu.xib */,
+				1328B11117CBB459007FCCC8 /* Controllers */,
+				1328B11017CBB448007FCCC8 /* Views */,
 				1328B0C517CB6F89007FCCC8 /* Supporting Files */,
 			);
 			path = Bat;
@@ -100,6 +110,24 @@
 				1328B0CD17CB6F89007FCCC8 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1328B11017CBB448007FCCC8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1328B10D17CBA376007FCCC8 /* WebViewController.xib */,
+				1328B0D317CB6F89007FCCC8 /* MainMenu.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		1328B11117CBB459007FCCC8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1328B10B17CBA376007FCCC8 /* WebViewController.h */,
+				1328B10C17CBA376007FCCC8 /* WebViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +184,7 @@
 				1328B0C917CB6F89007FCCC8 /* InfoPlist.strings in Resources */,
 				1328B0CF17CB6F89007FCCC8 /* Credits.rtf in Resources */,
 				1328B0D517CB6F89007FCCC8 /* MainMenu.xib in Resources */,
+				1328B10F17CBA376007FCCC8 /* WebViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +197,7 @@
 			files = (
 				1328B0CB17CB6F89007FCCC8 /* main.m in Sources */,
 				1328B0D217CB6F89007FCCC8 /* AppDelegate.m in Sources */,
+				1328B10E17CBA376007FCCC8 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +331,7 @@
 				1328B0DA17CB6F89007FCCC8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

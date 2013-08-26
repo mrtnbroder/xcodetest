@@ -7,9 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "WebViewController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
+{
+    
+}
+
+@property (nonatomic, assign) IBOutlet NSToolbarItem *startItem;
+@property (nonatomic, assign) IBOutlet NSToolbarItem *settingsItem;
+@property (nonatomic, assign) IBOutlet NSToolbarItem *timerItem;
+@property (nonatomic, assign) IBOutlet NSToolbarItem *statusItem;
 
 @property (assign) IBOutlet NSWindow *window;
+@property (assign) IBOutlet NSView *mainView;
 
 @end
